@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <a href="proyectos.html"><i class="fas fa-tasks"></i></a>
+        <a href="beneficios.html"><i class="fas fa-award"></i></a>
+        <a href="historia.html"><i class="fas fa-history"></i></a>
+        <a href="contacto.html"><i class="fab fa-whatsapp"></i></a>
+    </nav>
+
+    <section class="contact-section8">
+        <div class="contact-text8">
+            <h2>¿QUIERES TU WEB?</h2>
+            <p>¡Escríbeme en: <br><br><a href="https://wa.link/diuqnn" class="whatsapp-button8" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon-small8" />
+                Conversar
+            </a><div id="countdown"></div></p>
+            <!-- <a href="https://wa.link/diuqnn" class="whatsapp-button8" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon-small8" />
+                Iniciar Chat
+            </a> -->
+            
+        </div>
+        <!-- <div class="whatsapp-icon8">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        </div> -->
+    </section>
+
+     <!-- Icono de subir a la parte superior -->
+<a href="#" class="scroll-to-top" id="scrollToTop">
+    <i class="fas fa-chevron-up"></i>
+</a>
+
+
+</body>
+
+</html>
+<script>
+    let countdown = 5;
+    const countdownElement = document.getElementById('countdown');
+
+    const interval = setInterval(() => {
+        countdownElement.textContent = countdown;
+        countdown--;
+
+        if (countdown < 0) {
+            clearInterval(interval);
+            countdownElement.innerHTML = '<i class="fas fa-hand-pointer"></i> ¡Haz clic aquí!';
+
+            // Dispara el efecto de confetti en colores blanco y azul
+            for (let i = 0; i < 100; i++) {
+                confetti({
+                    angle: Math.random() * 360,
+                    spread: 70,
+                    startVelocity: 30,
+                    elementCount: 70,
+                    dragFriction: 0.1,
+                    duration: 3000,
+                    delay: 50,
+                    colors: ['#ffffff', '#007bff'] // Colores blanco y azul
+                });
+            }
+        }
+    }, 1000); // Actualiza cada segundo (1000 milisegundos)
+</script>
+<script src="script.js"></script>

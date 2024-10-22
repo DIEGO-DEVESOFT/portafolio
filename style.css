@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #222;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 4px 4px;
+}
+
+nav a:hover {
+    background-color: #313030;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(45% - 40px);
+    /* Ajuste para espacio de margen */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card img {
+    max-width: 100px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column;
+        width: 90%;
+        /* Se ajusta para pantallas pequeñas */
+    }
+
+    .card img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        /* Espacio debajo de la imagen */
+    }
+}
+
+/*  */
+
+
+
+.contact-section8 {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px;
+    height: 50vh; /* Altura de la pantalla completa */
+    background-color: #000000; /* Cambia el color de fondo si lo deseas */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-text8 {
+    flex: 1;
+    text-align: center; /* Alinea el texto al centro */
+    font-size: 25px;
+}
+
+.whatsapp-button8 {
+    display: inline-flex; /* Para alinear el icono y texto en línea */
+    align-items: left; /* Centra el icono verticalmente */
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    margin-top: 10px;
+}
+
+.whatsapp-button8:hover {
+    background-color: #098127; /* Nuevo color al pasar el mouse */
+}
+
+
+
+.whatsapp-icon-small8 {
+    width: 40px; /* Ajusta el tamaño del icono pequeño */
+    height: auto;
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+/*  Icono para subir la pagina rapido */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; /* Espaciado desde el fondo */
+    right: 20px; /* Espaciado desde la derecha */
+    background-color: #007BFF; /* Color de fondo azul */
+    color: rgb(255, 255, 255); /* Color del icono */
+    border-radius: 50%; /* Esquinas redondeadas para ser completamente redondo */
+    width: 50px; /* Ancho fijo */
+    height: 50px; /* Alto fijo */
+    display: flex; /* Usar flex para centrar el icono */
+    align-items: center; /* Centra verticalmente el icono */
+    justify-content: center; /* Centra horizontalmente el icono */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    transition: background-color 0.3s; /* Transición para el hover */
+    text-decoration: none; /* Elimina subrayado */
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
